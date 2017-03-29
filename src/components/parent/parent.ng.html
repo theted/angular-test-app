@@ -1,0 +1,21 @@
+<div class="parentContent">
+  <p>PARENT</p>
+
+  <div class="small">
+    <p>VALUE: {{$ctrl.value}}</p> <!-- will NOT update -->
+    <p>OPTS.VALUE: {{$ctrl.opts.value}}</p> <!-- WILL update -->
+  </div>
+
+</div>
+
+<child opts="$ctrl.opts"></child>
+
+<test
+  placeholder="Initial value"
+  opts="$ctrl.opts"
+  change="$ctrl.change()"
+  value="{{$ctrl.opts.value}}"
+  model="$ctrl.value"
+  ng-model="$ctrl.value"
+></test>
+
