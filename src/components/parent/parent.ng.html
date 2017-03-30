@@ -1,11 +1,6 @@
 <div class="parentContent">
   <p>PARENT</p>
-
-  <div class="small">
-    <p>VALUE: {{$ctrl.value}}</p> <!-- will NOT update -->
-    <p>OPTS.VALUE: {{$ctrl.opts.value}}</p> <!-- WILL update -->
-  </div>
-
+  <debugbox ctrl="$ctrl"></debugbox>
 </div>
 
 <child opts="$ctrl.opts"></child>
