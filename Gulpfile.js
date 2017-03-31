@@ -34,7 +34,7 @@ gulp.task('lint', function () {
 
 // build js - uglified/minified for production
 gulp.task('build-js', function () {
-  gulp.src(config.paths.scripts)
+  gulp.src(config.paths.js)
     .pipe(concat(config.out.jsMin))
     .pipe(uglify().on('error', function (e) {
       console.error(e);
@@ -44,7 +44,7 @@ gulp.task('build-js', function () {
 
 // build js - simply concatination for development
 gulp.task('build-js-pretty', function () {
-  gulp.src(config.paths.scripts)
+  gulp.src(config.paths.js)
     .pipe(concat(config.out.js))
     .pipe(gulp.dest(config.path))
 })
@@ -85,7 +85,7 @@ gulp.task('default', [
 
 // setup gulp watch task - watch files and build accordingly
 gulp.task('watch', ['default'], function () {
-  gulp.watch(config.paths.scripts, ['build-js-pretty']); // no need to build minified
+  gulp.watch(config.paths.js, ['build-js-pretty']); // no need to build minified
   gulp.watch(config.paths.stylus, ['build-stylus']);
   gulp.watch(config.paths.templates, ['build-templates']);
 });
