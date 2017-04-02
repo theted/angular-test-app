@@ -1,0 +1,53 @@
+// main.styl
+
+color = #222
+
+
+
+
+#app
+  background #323232
+  // padding 20px
+  width 100%;
+  max-width 800px
+  min-height 300px
+  display flex
+
+  parent
+    width 100%
+    display flex
+
+    child, test, .parentContent
+      flex 1
+      padding 20px
+
+parent
+  background lighten(color, 5%)
+
+child
+  background lighten(color, 9%)
+
+test
+  background lighten(color, 13%)
+
+
+input 
+  background #555
+  padding 4px
+  margin 10px 0
+  border-radius 3px
+  color #888
+  border 1px solid #888
+  
+
+
+
+
+// debug stuff
+.small
+  font-size 52%
+  text-transform uppercase
+  margin .6em 0 0 0
+  background #020202
+  padding 10px
+  margin 20px -20px
