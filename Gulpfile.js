@@ -7,7 +7,6 @@ var concat = require('gulp-concat')
 var uglify = require('gulp-uglify')
 var templateCache = require('gulp-angular-templatecache');
 var eslint = require('gulp-eslint');
-var less = require('gulp-less');
 var stylus = require('gulp-stylus');
 var template = require('gulp-template');
 var browserSync = require('browser-sync');
